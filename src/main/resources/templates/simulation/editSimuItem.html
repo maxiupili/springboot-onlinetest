@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>添加模拟卷题目页面</title>
+    <!-- Bootstrap core CSS -->
+    <link href="asserts/css/bootstrap.min.css" th:href="@{/asserts/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
+    <style type="text/css">
+        /* Chart.js */
+
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+</head>
+
+<body>
+
+<!--引入topbar-->
+<div th:replace="common/bar::topbar"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <!--引入sidebar-->
+        <div th:replace="common/bar::sidebar(activeUri='simulation')"></div>
+
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <form class="col-md-9 col-md-offset-3" th:action="@{/editSimuItem}" method="post">
+                <input type="hidden" name="_method" value="put"/>
+                <input type="hidden" name="simu_id" th:value="${simulationTsetItem.getSimu_id()}"/>
+                <p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+
+                <div class="form-group">
+                    <label>模拟卷内题目序号</label>
+                    <input name="item_num" type="text" class="form-control" th:value="${simulationTsetItem.getItem_num()}">
+                </div>
+
+                <div class="form-group">
+                    <label>所选题目ID</label>
+                    <input name="question_id" type="text" class="form-control" th:value="${simulationTsetItem.getQuestion_id()}">
+                </div>
+                <div class="form-group">
+                    <label>分值</label>
+                    <input name="item_score" type="text" class="form-control" th:value="${simulationTsetItem.getItem_score()}">
+                </div>
+                <div class="form-group">
+                    <label>模拟卷名</label>
+                    <input name="simu_name" type="text" class="form-control" th:value="${simulationTsetItem.getSimu_name()}">
+                </div>
+                <button type="submit" class="btn btn-primary">修改</button>
+                <a class="btn btn-primary" th:href="@{/comeBackToPreview/}+${simulationTsetItem.getSimu_id()}">返回</a>
+            </form>
+        </main>
+
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/asserts/js/jquery-3.2.1.slim.min.js}"></script>
+<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/asserts/js/popper.min.js}"></script>
+<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/asserts/js/bootstrap.min.js}"></script>
+
+<!-- Icons -->
+<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
+<script>
+    feather.replace()
+</script>
+
+
+
+</body>
+
+</html>

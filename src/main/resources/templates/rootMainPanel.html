@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>管理员主页面</title>
+		<!-- Bootstrap core CSS -->
+		<link href="asserts/css/bootstrap.min.css" th:href="@{/asserts/css/bootstrap.min.css}" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
+		<style type="text/css">
+			/* Chart.js */
+			
+			@-webkit-keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			@keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			.chartjs-render-monitor {
+				-webkit-animation: chartjs-render-animation 0.001s;
+				animation: chartjs-render-animation 0.001s;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!--引入topbar-->
+		<div th:replace="common/bar::topbar"></div>
+
+
+		<div class="container-fluid">
+			<div class="row">
+				<!--引入sidebar-->
+				<div th:replace="common/bar::sidebar(activeUri='main.html')"></div>
+
+
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+					<!--巨幕布局-->
+					<div class="jumbotron">
+						<h1><a href='http://ncre.neea.edu.cn/html1/report/18122/7461-1.htm' target='_blank' title="2019年全国计算机等级考试时间及相关安排">2019年全国计算机等级考试时间及相关安排</a></h1>
+						<p>
+							&nbsp;&nbsp;2019年全国计算机等级考试（NCRE）将举办四次考试，时间分别为3月30日至4月1日（第54次）、6月1日（第55次）、9月21日至23日（第56次）及12...
+						</p>
+
+						<ul>
+							<li>
+							<span>
+								<a href='http://ncre.neea.edu.cn/html1/report/1904/8195-1.htm' target='_blank' title="2019年3月全国计算机等级考试平稳结束">2019年3月全国计算机等级考试平稳结束</a>
+							</span>
+							</li>
+							<li>
+							<span>
+								<a href='http://ncre.neea.edu.cn/html1/report/18122/7464-1.htm' target='_blank' title="2019年3月全国计算机等级考试报名工作已启动">2019年3月全国计算机等级考试报名工作已启动</a>
+							</span>
+							</li>
+						</ul>
+
+					</div>
+
+					<div id="Content3" class="row">
+						<div class="col-xs-6 col-md-3">
+							<a th:href="@{/examIntroduce-root}" class="thumbnail">
+								<img th:src="@{/asserts/img/考试介绍.jpg}" height="225px" width="262.5px">
+							</a>
+						</div>
+
+						<div class="col-xs-6 col-md-3">
+							<a th:href="@{/stuNotice-root}" class="thumbnail">
+								<img th:src="@{/asserts/img/考生须知.jpg}" height="225px" width="262.5px">
+							</a>
+						</div>
+
+						<div class="col-xs-6 col-md-3">
+							<a th:href="@{/outLine-root}" class="thumbnail">
+								<img th:src="@{/asserts/img/大纲教材.jpg}" height="225px" width="262.5px">
+							</a>
+						</div>
+
+						<style>
+						.fun-con2{   padding-top: 15px}
+						</style>
+						<div class="col-xs-6 col-md-3">
+							<div>考生服务</div>
+
+							<div class="fun-con2" >
+
+								<dl>
+									<dd><a href="http://ncre.eeafj.cn/NCRE_EMS/studentlogin.aspx" target="_blank">考试报名入口</a></dd>
+
+									<dd><a id="certi_NCRE" href="http://zscx.neea.edu.cn/html1/folder/1508/211-1.htm?sid=300" target="_blank">证书查询</a></dd>
+
+									<dd><a href="http://bbhgzm.neea.edu.cn" target="_blank">补办合格证明</a></dd>
+
+									<dd><a id="results_NCRE" href="http://cjcx.neea.edu.cn/html1/folder/1508/206-1.htm?sid=300" target="_blank">成绩查询</a></dd>
+
+									<dd><a href="http://ncre.neea.edu.cn/html1/folder/1511/435-1.htm" target="_blank">承办机构</a></dd>
+
+									<dd><a href="http://ncre.neea.edu.cn/html1/folder/1509/36-1.htm" target="_blank">成绩分析报告</a></dd>
+
+									<dd><a href="http://zszy.neea.edu.cn/" target="_blank">证书直邮</a></dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+
+				</main>
+
+			</div>
+		</div>
+
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/asserts/js/jquery-3.2.1.slim.min.js}" ></script>
+		<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/asserts/js/popper.min.js}"></script>
+		<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/asserts/js/bootstrap.min.js}"></script>
+
+		<!-- Icons -->
+		<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
+		<script>
+			feather.replace()
+		</script>
+
+		<script type="text/javascript" th:src="@{/asserts/js/Chart.min.js}"></script>
+	</body>
+
+</html>

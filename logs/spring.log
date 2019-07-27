@@ -1,0 +1,315 @@
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== Starting SpringbootOnlinetestApplication on DESKTOP-NQOD7TO with PID 16528 (D:\WORKSPACE\springboot-onlinetest\target\classes started by 林森俊 in D:\WORKSPACE\springboot-onlinetest)
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== No active profile set, falling back to default profiles: default
+2019-07-15 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\apache-maven-3.6.0\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\林森俊\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.3\bin;;.]
+2019-07-15 === [main] === INFO  === o.a.c.c.ContainerBase.[Tomcat].[localhost].[/ncre] ==== Initializing Spring embedded WebApplicationContext
+2019-07-15 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 4306 ms
+2019-07-15 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-15 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path '/ncre'
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== Started SpringbootOnlinetestApplication in 7.287 seconds (JVM running for 10.606)
+2019-07-15 === [http-nio-8080-exec-2] === INFO  === o.a.c.c.ContainerBase.[Tomcat].[localhost].[/ncre] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-15 === [http-nio-8080-exec-2] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-07-15 === [http-nio-8080-exec-2] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 16 ms
+2019-07-15 === [http-nio-8080-exec-7] === WARN  === org.apache.catalina.util.SessionIdGeneratorBase ==== Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [384] milliseconds.
+2019-07-15 === [http-nio-8080-exec-7] === INFO  === com.alibaba.druid.pool.DruidDataSource ==== {dataSource-1} inited
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== Starting SpringbootOnlinetestApplication on DESKTOP-NQOD7TO with PID 2276 (D:\WORKSPACE\springboot-onlinetest\target\classes started by 林森俊 in D:\WORKSPACE\springboot-onlinetest)
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== No active profile set, falling back to default profiles: default
+2019-07-15 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\apache-maven-3.6.0\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\林森俊\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.3\bin;;.]
+2019-07-15 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2019-07-15 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1358 ms
+2019-07-15 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-15 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== Started SpringbootOnlinetestApplication in 2.405 seconds (JVM running for 3.526)
+2019-07-15 === [http-nio-8080-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-15 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-07-15 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 9 ms
+2019-07-15 === [http-nio-8080-exec-7] === WARN  === org.apache.catalina.util.SessionIdGeneratorBase ==== Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [395] milliseconds.
+2019-07-15 === [http-nio-8080-exec-7] === INFO  === com.alibaba.druid.pool.DruidDataSource ==== {dataSource-1} inited
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== Starting SpringbootOnlinetestApplication on DESKTOP-NQOD7TO with PID 12308 (D:\WORKSPACE\springboot-onlinetest\target\classes started by 林森俊 in D:\WORKSPACE\springboot-onlinetest)
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== No active profile set, falling back to default profiles: default
+2019-07-15 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\apache-maven-3.6.0\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\林森俊\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.3\bin;;.]
+2019-07-15 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2019-07-15 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1398 ms
+2019-07-15 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-15 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== Started SpringbootOnlinetestApplication in 2.515 seconds (JVM running for 3.678)
+2019-07-15 === [http-nio-8080-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-15 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-07-15 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 12 ms
+2019-07-15 === [http-nio-8080-exec-2] === WARN  === org.apache.catalina.util.SessionIdGeneratorBase ==== Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [402] milliseconds.
+2019-07-15 === [http-nio-8080-exec-2] === INFO  === com.alibaba.druid.pool.DruidDataSource ==== {dataSource-1} inited
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== Starting SpringbootOnlinetestApplication on DESKTOP-NQOD7TO with PID 7920 (D:\WORKSPACE\springboot-onlinetest\target\classes started by 林森俊 in D:\WORKSPACE\springboot-onlinetest)
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== No active profile set, falling back to default profiles: default
+2019-07-15 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\apache-maven-3.6.0\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\林森俊\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.3\bin;;.]
+2019-07-15 === [main] === INFO  === o.a.c.c.ContainerBase.[Tomcat].[localhost].[/ncre] ==== Initializing Spring embedded WebApplicationContext
+2019-07-15 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1309 ms
+2019-07-15 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-15 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path '/ncre'
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== Started SpringbootOnlinetestApplication in 2.422 seconds (JVM running for 4.521)
+2019-07-15 === [http-nio-8080-exec-2] === INFO  === o.a.c.c.ContainerBase.[Tomcat].[localhost].[/ncre] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-15 === [http-nio-8080-exec-2] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-07-15 === [http-nio-8080-exec-2] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 8 ms
+2019-07-15 === [http-nio-8080-exec-3] === WARN  === org.apache.catalina.util.SessionIdGeneratorBase ==== Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [366] milliseconds.
+2019-07-15 === [http-nio-8080-exec-3] === INFO  === com.alibaba.druid.pool.DruidDataSource ==== {dataSource-1} inited
+2019-07-15 === [http-nio-8080-exec-8] === ERROR === org.thymeleaf.TemplateEngine ==== [THYMELEAF][http-nio-8080-exec-8] Exception processing template "error/404": An error happened during template parsing (template: "class path resource [templates/error/404.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/error/404.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "ext.code" (template: "error/404" - line 39, col 14)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 36 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "ext.code" (template: "error/404" - line 39, col 14)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.performInlining(OutputExpressionInlinePreProcessorHandler.java:440)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleText(OutputExpressionInlinePreProcessorHandler.java:146)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleText(InlinedOutputExpressionMarkupHandler.java:80)
+	at org.attoparser.HtmlMarkupHandler.handleText(HtmlMarkupHandler.java:208)
+	at org.attoparser.AbstractChainedMarkupHandler.handleText(AbstractChainedMarkupHandler.java:203)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:662)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 38 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'code' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:109)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 56 common frames omitted
+2019-07-15 === [http-nio-8080-exec-8] === ERROR === o.a.c.c.C.[.[.[/ncre].[dispatcherServlet] ==== Servlet.service() for servlet [dispatcherServlet] threw exception
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'code' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:109)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.performInlining(OutputExpressionInlinePreProcessorHandler.java:440)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleText(OutputExpressionInlinePreProcessorHandler.java:146)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleText(InlinedOutputExpressionMarkupHandler.java:80)
+	at org.attoparser.HtmlMarkupHandler.handleText(HtmlMarkupHandler.java:208)
+	at org.attoparser.AbstractChainedMarkupHandler.handleText(AbstractChainedMarkupHandler.java:203)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:662)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-07-15 === [http-nio-8080-exec-8] === ERROR === o.a.c.core.ContainerBase.[Tomcat].[localhost] ==== Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/error/404.html]")
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/error/404.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	... 25 common frames omitted
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "ext.code" (template: "error/404" - line 39, col 14)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 36 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "ext.code" (template: "error/404" - line 39, col 14)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.performInlining(OutputExpressionInlinePreProcessorHandler.java:440)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleText(OutputExpressionInlinePreProcessorHandler.java:146)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleText(InlinedOutputExpressionMarkupHandler.java:80)
+	at org.attoparser.HtmlMarkupHandler.handleText(HtmlMarkupHandler.java:208)
+	at org.attoparser.AbstractChainedMarkupHandler.handleText(AbstractChainedMarkupHandler.java:203)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:662)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 38 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'code' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:109)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 56 common frames omitted
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== Starting SpringbootOnlinetestApplication on DESKTOP-NQOD7TO with PID 6612 (D:\WORKSPACE\springboot-onlinetest\target\classes started by 林森俊 in D:\WORKSPACE\springboot-onlinetest)
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== No active profile set, falling back to default profiles: default
+2019-07-15 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\apache-maven-3.6.0\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\林森俊\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.3\bin;;.]
+2019-07-15 === [main] === INFO  === o.a.c.c.ContainerBase.[Tomcat].[localhost].[/ncre] ==== Initializing Spring embedded WebApplicationContext
+2019-07-15 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1341 ms
+2019-07-15 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-15 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path '/ncre'
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== Started SpringbootOnlinetestApplication in 2.446 seconds (JVM running for 3.597)
+2019-07-15 === [http-nio-8080-exec-1] === INFO  === o.a.c.c.ContainerBase.[Tomcat].[localhost].[/ncre] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-15 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-07-15 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 9 ms
+2019-07-15 === [http-nio-8080-exec-1] === WARN  === org.apache.catalina.util.SessionIdGeneratorBase ==== Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [406] milliseconds.
+2019-07-15 === [http-nio-8080-exec-2] === INFO  === com.alibaba.druid.pool.DruidDataSource ==== {dataSource-1} inited
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== Starting SpringbootOnlinetestApplication on DESKTOP-NQOD7TO with PID 5376 (D:\WORKSPACE\springboot-onlinetest\target\classes started by 林森俊 in D:\WORKSPACE\springboot-onlinetest)
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== No active profile set, falling back to default profiles: default
+2019-07-15 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-07-15 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\apache-maven-3.6.0\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\林森俊\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.3\bin;;.]
+2019-07-15 === [main] === INFO  === o.a.c.c.ContainerBase.[Tomcat].[localhost].[/ncre] ==== Initializing Spring embedded WebApplicationContext
+2019-07-15 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1465 ms
+2019-07-15 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-15 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path '/ncre'
+2019-07-15 === [main] === INFO  === com.ghj.springboot.SpringbootOnlinetestApplication ==== Started SpringbootOnlinetestApplication in 2.574 seconds (JVM running for 4.461)
+2019-07-15 === [http-nio-8080-exec-1] === INFO  === o.a.c.c.ContainerBase.[Tomcat].[localhost].[/ncre] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-15 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2019-07-15 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 8 ms
+2019-07-15 === [http-nio-8080-exec-1] === WARN  === org.apache.catalina.util.SessionIdGeneratorBase ==== Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [435] milliseconds.
+2019-07-15 === [http-nio-8080-exec-2] === INFO  === com.alibaba.druid.pool.DruidDataSource ==== {dataSource-1} inited

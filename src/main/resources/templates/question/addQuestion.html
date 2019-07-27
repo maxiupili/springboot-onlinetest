@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>添加题目页面</title>
+		<!-- Bootstrap core CSS -->
+		<link href="asserts/css/bootstrap.min.css" th:href="@{/asserts/css/bootstrap.min.css}" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
+		<style type="text/css">
+			/* Chart.js */
+			
+			@-webkit-keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			@keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			.chartjs-render-monitor {
+				-webkit-animation: chartjs-render-animation 0.001s;
+				animation: chartjs-render-animation 0.001s;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--引入topbar-->
+		<div th:replace="common/bar::topbar"></div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<!--引入sidebar-->
+				<div th:replace="common/bar::sidebar(activeUri='questions')"></div>
+
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+					<!--添加；-->
+					<form th:action="@{/question}" method="post">
+
+						<div class="form-group">
+							<label>题干</label>
+							<textarea name="questiondetails" class="form-control" rows="8"></textarea>
+						</div>
+						<p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+						<div class="form-group">
+							<label>答案</label>
+							<textarea name="answer" class="form-control" rows="2"></textarea>
+						</div>
+
+                        <div class="form-group">
+                            <label>题目类型</label><br/>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="question_type" value="选择题" id="question_type_1" checked>
+                                <label class="form-check-label">选择题</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="question_type" value="填空题" id="question_type_2">
+                                <label class="form-check-label">填空题</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="question_type" value="主观题" id="question_type_3">
+                                <label class="form-check-label">主观题</label>
+                            </div>
+                        </div>
+
+						<div class="form-group">
+							<label>题目等级</label><br/>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="rank_id" value="1" id="rank_id_1">
+								<label class="form-check-label">一级</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="rank_id" value="2" id="rank_id_2">
+								<label class="form-check-label">二级</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="rank_id" value="3" id="rank_id_3">
+								<label class="form-check-label">三级</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="rank_id" value="4" id="rank_id_4">
+								<label class="form-check-label">四级</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>科目代号</label><br/>
+                            <div id="rank_1" style="display: none">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="14">
+                                    <label class="form-check-label">计算机基础及WPS Office应用</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="15">
+                                    <label class="form-check-label">计算机基础及MS Office应用</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="16">
+                                    <label class="form-check-label">计算机基础及Photoshop应用</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="17">
+                                    <label class="form-check-label">网络安全素质教育</label>
+                                </div>
+                            </div>
+                            <div id="rank_2" style="display: none">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="24">
+                                    <label class="form-check-label">C语言程序设计</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="26">
+                                    <label class="form-check-label">VB语言程序设计</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="28">
+                                    <label class="form-check-label">Java语言程序设计</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="29">
+                                    <label class="form-check-label">Access数据库程序设计</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="61">
+                                    <label class="form-check-label">C++语言程序设计</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="63">
+                                    <label class="form-check-label">MySQL数据库程序设计</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="64">
+                                    <label class="form-check-label">Web程序设计</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="65">
+                                    <label class="form-check-label">MS Office高级应用</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="66">
+                                    <label class="form-check-label">Python语言程序设计</label>
+                                </div>
+                            </div>
+                            <div id="rank_3" style="display: none" >
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="35">
+                                    <label class="form-check-label">网络技术</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="36">
+                                    <label class="form-check-label">数据库技术</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="38">
+                                    <label class="form-check-label">信息安全技术</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="39">
+                                    <label class="form-check-label">嵌入式系统开发技术</label>
+                                </div>
+                            </div>
+                            <div id="rank_4" style="display: none">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="41">
+                                    <label class="form-check-label">网络工程师</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="42">
+                                    <label class="form-check-label">数据库工程师</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="44">
+                                    <label class="form-check-label">信息安全工程师</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="subject_id" value="45">
+                                    <label class="form-check-label">嵌入式系统开发工程师</label>
+                                </div>
+                            </div>
+
+						</div>
+                        <div class="form-group">
+                            <label>图片地址url(仅填写图片名称，推荐使用jpg格式的图片以防止显示错误，图片储存文件夹为/asserts/img):</label>
+                            <input name="imageurl" type="text" class="form-control" placeholder="">
+                        </div>
+						<button type="submit" class="btn btn-primary">添加</button>
+                        <a class="btn btn-primary" th:href="@{/questionsClassifyRoot}">返回</a>
+					</form>
+				</main>
+			</div>
+		</div>
+
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/asserts/js/jquery-3.2.1.slim.min.js}"></script>
+		<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/asserts/js/popper.min.js}"></script>
+		<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/asserts/js/bootstrap.min.js}"></script>
+
+		<!-- Icons -->
+		<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
+		<script>
+			feather.replace()
+		</script>
+
+        <script type="text/javascript">
+            var rank_1_radio = document.getElementById("rank_id_1");
+            rank_1_radio.onclick=function () {
+                document.getElementById("rank_1").style.display="";
+                document.getElementById("rank_2").style.display="none";
+                document.getElementById("rank_3").style.display="none";
+                document.getElementById("rank_4").style.display="none";
+            }
+
+            var rank_2_radio = document.getElementById("rank_id_2");
+            rank_2_radio.onclick=function () {
+                document.getElementById("rank_2").style.display="";
+                document.getElementById("rank_1").style.display="none";
+                document.getElementById("rank_3").style.display="none";
+                document.getElementById("rank_4").style.display="none";
+            }
+
+            var rank_3_radio = document.getElementById("rank_id_3");
+            rank_3_radio.onclick=function () {
+                document.getElementById("rank_3").style.display="";
+                document.getElementById("rank_2").style.display="none";
+                document.getElementById("rank_1").style.display="none";
+                document.getElementById("rank_4").style.display="none";
+            }
+
+            var rank_4_radio = document.getElementById("rank_id_4");
+            rank_4_radio.onclick=function () {
+                document.getElementById("rank_4").style.display="";
+                document.getElementById("rank_2").style.display="none";
+                document.getElementById("rank_3").style.display="none";
+                document.getElementById("rank_1").style.display="none";
+            }
+
+        </script>
+
+
+	</body>
+
+</html>

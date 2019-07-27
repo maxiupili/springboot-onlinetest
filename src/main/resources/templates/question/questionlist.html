@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>题库列表页面</title>
+		<!-- Bootstrap core CSS -->
+		<link href="asserts/css/bootstrap.min.css" th:href="@{/asserts/css/bootstrap.min.css}" rel="stylesheet">
+		<!--<link href="asserts/css/bootstrap.css" th:href="@{/asserts/css/bootstrap.css}" rel="stylesheet">-->
+
+		<!-- Custom styles for this template -->
+		<link href="asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
+
+		<style type="text/css">
+			/* Chart.js */
+			
+			@-webkit-keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			@keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			.chartjs-render-monitor {
+				-webkit-animation: chartjs-render-animation 0.001s;
+				animation: chartjs-render-animation 0.001s;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--引入topbar-->
+		<div th:replace="common/bar::topbar"></div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<!--引入sidebar-->
+				<div th:replace="common/bar::sidebar(activeUri='questions')"></div>
+
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+					<h2>题库表</h2>
+					<h3>
+						<a class="btn btn-sm btn-success" th:href="@{/question}">题目添加</a>
+					</h3>
+					<h4>
+						<a class="btn btn-sm btn-info" th:href="@{/questionsClassifyRoot/choice/{subject_id}(subject_id=${thisSubject_id})}">选择题</a>
+						<a class="btn btn-sm btn-info" th:href="@{/questionsClassifyRoot/gapFilling/{subject_id}(subject_id=${thisSubject_id})}">填空题</a>
+						<a class="btn btn-sm btn-info" th:href="@{/questionsClassifyRoot/subjective/{subject_id}(subject_id=${thisSubject_id})}">主观题</a>
+					</h4>
+					<div class="table-responsive">
+						<table class="table table-striped table-sm">
+							<thead>
+								<tr>
+									<th>QuestionId</th>
+									<th>QuestionDetails</th>
+									<th>Answer</th>
+									<th>QuestionType</th>
+									<th>RankId</th>
+									<th>SubjectId</th>
+									<th>ImageUrl</th>
+									<th width="300px">操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="question:${pageInfo.list}">
+									<td th:text="${question.getQuestion_id()}"></td>
+									<td th:text="${question.getQuestiondetails()}"></td>
+									<td th:text="${question.getAnswer()}"></td>
+									<td th:text="${question.getQuestion_type()}"></td>
+									<td th:text="${question.getRank_id()}"></td>
+									<td th:text="${question.getSubject_id()}"></td>
+									<td th:text="${question.getImageurl()}"></td>
+									<td>
+										<a class="btn btn-sm btn-primary" th:href="@{/question/}+${question.getQuestion_id()}">编辑</a>
+										<a class="btn btn-sm btn-success" th:href="@{/addSimuItem/}+${question.getQuestion_id()}">添加到模拟卷</a>
+										<button th:attr="del_uri=@{/question/}+${question.getQuestion_id()}" class="btn btn-sm btn-danger deleteBtn">删除</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--显示分页信息-->
+					<div class="modal-footer no-margin-top">
+						<div class="col-md-6">
+							当前第 [[${pageInfo.pageNum}]]页,共 [[${pageInfo.pages}]] 页.一共 [[${pageInfo.total}]] 条记录
+						</div>
+
+						<!--分页导航栏-->
+						<nav aria-label="Page navigation example">
+							<ul class="pagination">
+								<li class="page-item">
+									<a class="page-link" href="#" th:href="@{/questionsClassifyRoot/{questionType}/{subject_id}(questionType=${questionType},subject_id=${thisSubject_id},pageNum=1)}" aria-label="Previous">
+										<span aria-hidden="true">&laquo;</span>
+										<span class="sr-only">Previous</span>
+									</a>
+								</li>
+
+								<li class="page-item" th:each="nav:${pageInfo.navigatepageNums}">
+									<a class="page-link" th:href="@{/questionsClassifyRoot/{questionType}/{subject_id}(questionType=${questionType},subject_id=${thisSubject_id},pageNum=${nav})}" th:text="${nav}" th:if="${nav != pageInfo.pageNum}"></a>
+									<span class="page-link" style="background-color: #5bc0de" th:if="${nav == pageInfo.pageNum}" th:text="${nav}"></span>
+								</li>
+
+								<li class="page-item">
+									<a class="page-link" href="#" th:href="@{/questionsClassifyRoot/{questionType}/{subject_id}(questionType=${questionType},subject_id=${thisSubject_id},pageNum=${pageInfo.pages})}" aria-label="Next">
+										<span aria-hidden="true">&raquo;</span>
+										<span class="sr-only">Next</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+					</div>
+
+					<!--跳转实现-->
+					<span>
+						<div style="float: right">
+							<form class="form-inline" th:action="@{/questionsClassifyRoot/{questionType}/{subject_id}(questionType=${questionType},subject_id=${thisSubject_id})}" method="get">
+								<button type="submit" class="btn btn-primary btn-sm">跳转到</button>
+								<div class="form-group">
+									<div class="input-group">
+										<input type="text" name="pageNum" style="width: 30px" class="page-item" placeholder="1">
+									</div>
+								</div>
+								<label>页</label>
+							</form>
+						</div>
+					</span>
+
+					<!--<div>当前页号：<span th:text="${pageInfo.pageNum}"></span></div>-->
+					<!--<div>每页条数：<span th:text="${pageInfo.pageSize}"></span></div>-->
+					<!--<div>起始行号：<span th:text="${pageInfo.startRow}"></span></div>-->
+					<!--<div>终止行号：<span th:text="${pageInfo.endRow}"></span></div>-->
+					<!--<div>总结果数：<span th:text="${pageInfo.total}"></span></div>-->
+					<!--<div>总页数：<span th:text="${pageInfo.pages}"></span></div>-->
+					<!--<hr />-->
+					<!--<div>是否为第一页：<span th:text="${pageInfo.isFirstPage}"></span></div>-->
+					<!--<div>是否为最后一页：<span th:text="${pageInfo.isLastPage}"></span></div>-->
+					<!--<div>是否有前一页：<span th:text="${pageInfo.hasPreviousPage}"></span></div>-->
+					<!--<div>是否有下一页：<span th:text="${pageInfo.hasNextPage}"></span></div>-->
+
+				</main>
+				<form id="deleteUserForm"  method="post">
+					<input type="hidden" name="_method" value="delete"/>
+				</form>
+			</div>
+		</div>
+
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/asserts/js/jquery-3.2.1.slim.min.js}"></script>
+		<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/asserts/js/popper.min.js}"></script>
+		<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/asserts/js/bootstrap.min.js}"></script>
+
+		<!-- Icons -->
+		<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
+		<script>
+			feather.replace()
+		</script>
+
+		<script>
+            $(".deleteBtn").click(function(){
+                //删除当前员工的
+                $("#deleteUserForm").attr("action",$(this).attr("del_uri")).submit();
+                return false;
+            });
+		</script>
+
+
+
+	</body>
+
+</html>

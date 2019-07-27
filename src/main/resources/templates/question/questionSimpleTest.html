@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>题库列表页面</title>
+		<!-- Bootstrap core CSS -->
+		<link href="asserts/css/bootstrap.min.css" th:href="@{/asserts/css/bootstrap.min.css}" rel="stylesheet">
+		<!--<link href="asserts/css/bootstrap.css" th:href="@{/asserts/css/bootstrap.css}" rel="stylesheet">-->
+
+		<!-- Custom styles for this template -->
+		<link href="asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
+
+		<style type="text/css">
+			/* Chart.js */
+			
+			@-webkit-keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			@keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			.chartjs-render-monitor {
+				-webkit-animation: chartjs-render-animation 0.001s;
+				animation: chartjs-render-animation 0.001s;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--引入topbar-->
+		<div th:replace="common/stubar::stutopbar"></div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<!--引入sidebar-->
+				<div th:replace="common/stubar::stusidebar(activeUri='questions')"></div>
+
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+					<h2>题库表</h2>
+					<h4>
+						<a class="btn btn-sm btn-info" th:href="@{/questionsClassify/choice/{subject_id}(subject_id=${thisSubject_id})}">选择题</a>
+						<a class="btn btn-sm btn-info" th:href="@{/questionsClassify/gapFilling/{subject_id}(subject_id=${thisSubject_id})}">填空题</a>
+						<a class="btn btn-sm btn-info" th:href="@{/questionsClassify/subjective/{subject_id}(subject_id=${thisSubject_id})}">主观题</a>
+					</h4>
+					<div class="table-responsive">
+						<div th:each="question:${pageInfo.list}">
+							<div class="form-group">
+								<label>[[${pageInfo.pageNum}]].题干</label>
+								<textarea class="form-control" rows="10"
+										  th:text="${question.getQuestiondetails()}" disabled></textarea>
+							</div>
+							<!--有图片则显示无图隐藏div th:if="${question.getImageurl()!= null}"-->
+							<div class="form-group">
+								<img th:if="${question.getImageurl()!= ''}" th:src="@{/asserts/img/}+${question.getImageurl()}" height="200px" width="250px">
+							</div>
+							<div th:if="${#strings.equals(session.thisQuestionId,question.getQuestion_id())}">
+								<p style="color: red" th:text="${session.addUserFaultMsg}" th:if="${not #strings.isEmpty(session.addUserFaultMsg)}"></p>
+							</div>
+
+							<div class="form-group">
+								<label>答案</label>
+								<textarea id="answerBox" rows="2" class="form-control"></textarea>
+							</div>
+							<script th:inline="javascript">
+								var rightAnswer = [[${question.getAnswer()}]] ;
+							</script>
+							<button id="checkAnswer" class="btn btn-primary btn-sm">答案校对</button>
+							<label id="answerIsCorrect" style="display: none">答案正确</label>
+							<label id="answerIsWrong" style="display: none">答案错误,正确答案为:</label>
+							<label id="correctAnswer" style="display: none" th:text="${question.getAnswer()}"></label>
+							<form id="addUserFaultForm" th:action="@{/addUserFault}" method="post" style="display: none">
+								<!--<input type="hidden" name="_method" value="put">-->
+								<input type="hidden" name="username" th:value="${session.loginUsersUsername}">
+								<input type="hidden" name="question_id" th:value="${question.getQuestion_id()}">
+								<input type="hidden" name="subject_id" th:value="${question.getSubject_id()}">
+								<input type="hidden" name="pageNum" th:value="${pageInfo.pageNum}">
+								<button id="markThisQuestion" type="submit" class="btn btn-primary btn-sm">标记错题</button>
+							</form>
+
+						</div>
+
+					</div>
+
+
+					<!--显示分页信息-->
+					<div class="modal-footer no-margin-top">
+						<div class="col-md-6">
+							当前第 [[${pageInfo.pageNum}]]页,共 [[${pageInfo.pages}]] 页.一共 [[${pageInfo.total}]] 条记录
+						</div>
+
+						<!--分页导航栏-->
+						<nav aria-label="Page navigation example">
+							<ul class="pagination">
+								<li class="page-item">
+									<a class="page-link" href="#" th:href="@{/questionsClassify/{questionType}/{subject_id}(questionType=${questionType},subject_id=${thisSubject_id},pageNum=1)}" aria-label="Previous">
+										<span aria-hidden="true">&laquo;</span>
+										<span class="sr-only">Previous</span>
+									</a>
+								</li>
+
+								<li class="page-item" th:each="nav:${pageInfo.navigatepageNums}">
+									<a class="page-link" th:href="@{/questionsClassify/{questionType}/{subject_id}(questionType=${questionType},subject_id=${thisSubject_id},pageNum=${nav})}" th:text="${nav}" th:if="${nav != pageInfo.pageNum}"></a>
+									<span class="page-link" style="background-color: #5bc0de" th:if="${nav == pageInfo.pageNum}" th:text="${nav}"></span>
+								</li>
+
+								<li class="page-item">
+									<a class="page-link" href="#" th:href="@{/questionsClassify/{questionType}/{subject_id}(questionType=${questionType},subject_id=${thisSubject_id},pageNum=${pageInfo.pages})}" aria-label="Next">
+										<span aria-hidden="true">&raquo;</span>
+										<span class="sr-only">Next</span>
+									</a>
+								</li>
+							</ul>
+
+						</nav>
+
+					</div>
+					<!--跳转实现-->
+					<span>
+						<div style="float: right">
+							<form class="form-inline" th:action="@{/questionsClassify/{questionType}/{subject_id}(questionType=${questionType},subject_id=${thisSubject_id})}" method="get">
+								<button type="submit" class="btn btn-primary btn-sm">跳转到</button>
+								<div class="form-group">
+									<div class="input-group">
+										<input type="text" name="pageNum" style="width: 30px" class="page-item" placeholder="1">
+									</div>
+								</div>
+								<label>页</label>
+							</form>
+						</div>
+					</span>
+
+					<!--<div>当前页号：<span th:text="${pageInfo.pageNum}"></span></div>-->
+					<!--<div>每页条数：<span th:text="${pageInfo.pageSize}"></span></div>-->
+					<!--<div>起始行号：<span th:text="${pageInfo.startRow}"></span></div>-->
+					<!--<div>终止行号：<span th:text="${pageInfo.endRow}"></span></div>-->
+					<!--<div>总结果数：<span th:text="${pageInfo.total}"></span></div>-->
+					<!--<div>总页数：<span th:text="${pageInfo.pages}"></span></div>-->
+					<!--<hr />-->
+					<!--<div>是否为第一页：<span th:text="${pageInfo.isFirstPage}"></span></div>-->
+					<!--<div>是否为最后一页：<span th:text="${pageInfo.isLastPage}"></span></div>-->
+					<!--<div>是否有前一页：<span th:text="${pageInfo.hasPreviousPage}"></span></div>-->
+					<!--<div>是否有下一页：<span th:text="${pageInfo.hasNextPage}"></span></div>-->
+
+				</main>
+				<!--<form id="deleteUserForm"  method="post">-->
+					<!--<input type="hidden" name="_method" value="delete"/>-->
+				<!--</form>-->
+			</div>
+		</div>
+
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/asserts/js/jquery-3.2.1.slim.min.js}"></script>
+		<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/asserts/js/popper.min.js}"></script>
+		<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/asserts/js/bootstrap.min.js}"></script>
+
+		<!-- Icons -->
+		<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
+		<script>
+			feather.replace()
+		</script>
+
+		<!--<script>-->
+            <!--$(".deleteBtn").click(function(){-->
+                <!--//删除当前员工的-->
+                <!--$("#deleteUserForm").attr("action",$(this).attr("del_uri")).submit();-->
+                <!--return false;-->
+            <!--});-->
+		<!--</script>-->
+
+		<script type="text/javascript">
+
+			document.getElementById("checkAnswer").onclick = function () {
+
+				var uncheckedAnswer = document.getElementById("answerBox").value;
+
+				if (uncheckedAnswer == rightAnswer || uncheckedAnswer == rightAnswer.toLowerCase()) {
+					document.getElementById("answerIsCorrect").style.display="";
+					document.getElementById("answerIsWrong").style.display="none";
+					document.getElementById("correctAnswer").style.display="none";
+					document.getElementById("addUserFaultForm").style.display="none";
+				} else {
+					document.getElementById("answerIsCorrect").style.display="none";
+					document.getElementById("answerIsWrong").style.display="";
+					document.getElementById("correctAnswer").style.display="";
+					document.getElementById("addUserFaultForm").style.display="";
+				}
+			}
+		</script>
+
+
+
+
+
+	</body>
+
+</html>

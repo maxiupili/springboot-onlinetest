@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>题库分类页面</title>
+    <!-- Bootstrap core CSS -->
+    <link href="asserts/css/bootstrap.min.css" th:href="@{/asserts/css/bootstrap.min.css}" rel="stylesheet">
+    <!--<link href="asserts/css/bootstrap.css" th:href="@{/asserts/css/bootstrap.css}" rel="stylesheet">-->
+
+    <!-- Custom styles for this template -->
+    <link href="asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
+    <style type="text/css">
+        /* Chart.js */
+
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+</head>
+
+<body>
+
+<!--引入topbar-->
+<div th:replace="common/stubar::stutopbar"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <!--引入sidebar-->
+        <div th:replace="common/stubar::stusidebar(activeUri='questions')"></div>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+            <div class="jumbotron">
+                <h1>计算机等级考试自测题库等级科目分类界面</h1>
+                <h4>一级</h4>
+                <div>
+                    <a>计算机基础及WPS Office应用</a>
+                    <a th:href="@{/questionsClassify/15}">计算机基础及MS Office应用</a>
+                    <a>计算机基础及Photoshop应用</a>
+                    <a>网络安全素质教育</a>
+                </div>
+                <h4>二级</h4>
+                <div>
+                    <a th:href="@{/questionsClassify/24}">C语言程序设计</a>
+                    <a>VB语言程序设计</a>
+                    <a>Java语言程序设计</a>
+                    <a>Access数据库程序设计</a>
+                    <a>C++语言程序设计</a>
+                    <a>MySQL数据库程序设计</a>
+                    <a>Web程序设计</a>
+                    <a th:href="@{/questionsClassify/65}">MS Office高级应用</a>
+                    <a>Python语言程序设计</a>
+                </div>
+                <h4>三级</h4>
+                <div>
+                    <a>网络技术</a>
+                    <a>数据库技术</a>
+                    <a>信息安全技术</a>
+                    <a>嵌入式系统开发技术</a>
+                </div>
+                <h4>四级</h4>
+                <div>
+                    <a>网络工程师</a>
+                    <a>数据库工程师</a>
+                    <a>信息安全工程师</a>
+                    <a>嵌入式系统开发工程师</a>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/asserts/js/jquery-3.2.1.slim.min.js}"></script>
+<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/asserts/js/popper.min.js}"></script>
+<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/asserts/js/bootstrap.min.js}"></script>
+
+<!-- Icons -->
+<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
+<script>
+    feather.replace()
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>考生须知</title>
+</head>
+<body>
+<!--introduce-->
+<div id="Content1" th:fragment="examIntroduce"><!--{listing:15070826}--><div class="folderdiv"><h1><span id="CurrentlyNode">考试介绍</span></h1><span id="CurrentlyText"><p style="margin-left:0cm; margin-right:0cm">　　全国计算机等级考试（National Computer Rank Examination，简称NCRE），是经原国家教育委员会（现教育部）批准，由教育部考试中心主办，面向社会，用于考查应试人员计算机应用知识与技能的全国性计算机水平考试体系。</p>
+
+<p style="margin-left:18pt; margin-right:0cm; text-align:center">　　NCRE级别科目设置及证书体系（2018年版）</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%">
+	<tbody>
+		<tr>
+			<td><strong>级别 </strong></td>
+			<td><strong>科目名称 </strong></td>
+			<td><strong>科目代码 </strong></td>
+			<td><strong>考试时长 </strong></td>
+			<td><strong>考核课程代码 </strong></td>
+			<td><strong>获证条件 </strong></td>
+		</tr>
+		<tr>
+			<td rowspan="4">一级</td>
+			<td>计算机基础及WPS Office应用</td>
+			<td style="vertical-align:top">14</td>
+			<td>90分钟</td>
+			<td style="vertical-align:top">114</td>
+			<td>科目14考试合格</td>
+		</tr>
+		<tr>
+			<td>计算机基础及MS Office应用</td>
+			<td style="vertical-align:top">15</td>
+			<td>90分钟</td>
+			<td style="vertical-align:top">115</td>
+			<td>科目15考试合格</td>
+		</tr>
+		<tr>
+			<td>计算机基础及Photoshop应用</td>
+			<td style="vertical-align:top">16</td>
+			<td>90分钟</td>
+			<td style="vertical-align:top">116</td>
+			<td>科目16考试合格</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:top">网络安全素质教育</td>
+			<td style="vertical-align:top">17</td>
+			<td style="vertical-align:top">90分钟</td>
+			<td style="vertical-align:top">117</td>
+			<td>科目17考试合格</td>
+		</tr>
+		<tr>
+			<td rowspan="9">二级</td>
+			<td>C语言程序设计</td>
+			<td style="vertical-align:top">24</td>
+			<td>120分钟</td>
+			<td style="vertical-align:top">201、224</td>
+			<td>科目24考试合格</td>
+		</tr>
+		<tr>
+			<td>VB语言程序设计</td>
+			<td style="vertical-align:top">26</td>
+			<td>120分钟</td>
+			<td style="vertical-align:top">201、226</td>
+			<td>科目26考试合格</td>
+		</tr>
+		<tr>
+			<td>Java语言程序设计</td>
+			<td style="vertical-align:top">28</td>
+			<td>120分钟</td>
+			<td style="vertical-align:top">201、228</td>
+			<td>科目28考试合格</td>
+		</tr>
+		<tr>
+			<td>Access数据库程序设计</td>
+			<td style="vertical-align:top">29</td>
+			<td>120分钟</td>
+			<td style="vertical-align:top">201、229</td>
+			<td>科目29考试合格</td>
+		</tr>
+		<tr>
+			<td>C++语言程序设计</td>
+			<td style="vertical-align:top">61</td>
+			<td>120分钟</td>
+			<td style="vertical-align:top">201、261</td>
+			<td>科目61考试合格</td>
+		</tr>
+		<tr>
+			<td>MySQL数据库程序设计</td>
+			<td style="vertical-align:top">63</td>
+			<td>120分钟</td>
+			<td style="vertical-align:top">201、263</td>
+			<td>科目63考试合格</td>
+		</tr>
+		<tr>
+			<td>Web程序设计</td>
+			<td style="vertical-align:top">64</td>
+			<td>120分钟</td>
+			<td style="vertical-align:top">201、264</td>
+			<td>科目64考试合格</td>
+		</tr>
+		<tr>
+			<td>MS Office高级应用</td>
+			<td style="vertical-align:top">65</td>
+			<td>120分钟</td>
+			<td style="vertical-align:top">201、265</td>
+			<td>科目65考试合格</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:top">Python语言程序设计</td>
+			<td style="vertical-align:top">66</td>
+			<td style="vertical-align:top">120分钟</td>
+			<td style="vertical-align:top">201、266</td>
+			<td>科目66考试合格</td>
+		</tr>
+		<tr>
+			<td rowspan="4">三级</td>
+			<td>网络技术</td>
+			<td>35</td>
+			<td>120分钟</td>
+			<td>335</td>
+			<td>科目35考试合格</td>
+		</tr>
+		<tr>
+			<td>数据库技术</td>
+			<td style="vertical-align:top">36</td>
+			<td>120分钟</td>
+			<td>336</td>
+			<td>科目36考试合格</td>
+		</tr>
+		<tr>
+			<td>信息安全技术</td>
+			<td style="vertical-align:top">38</td>
+			<td>120分钟</td>
+			<td style="vertical-align:top">338</td>
+			<td>科目38考试合格</td>
+		</tr>
+		<tr>
+			<td>嵌入式系统开发技术</td>
+			<td style="vertical-align:top">39</td>
+			<td>120分钟</td>
+			<td style="vertical-align:top">339</td>
+			<td>科目39考试合格</td>
+		</tr>
+		<tr>
+			<td rowspan="4">四级</td>
+			<td>网络工程师</td>
+			<td>41</td>
+			<td>90分钟</td>
+			<td>401、403</td>
+			<td>获得科目35证书，
+			<p>科目41考试合格</p>
+			</td>
+		</tr>
+		<tr>
+			<td>数据库工程师</td>
+			<td>42</td>
+			<td>90分钟</td>
+			<td>401、404</td>
+			<td>获得科目36证书，
+			<p>科目42考试合格</p>
+			</td>
+		</tr>
+		<tr>
+			<td>信息安全工程师</td>
+			<td>44</td>
+			<td>90分钟</td>
+			<td>401、403</td>
+			<td>获得科目38证书，
+			<p>科目44考试合格</p>
+			</td>
+		</tr>
+		<tr>
+			<td>嵌入式系统开发工程师</td>
+			<td>45</td>
+			<td>90分钟</td>
+			<td>401、402</td>
+			<td>获得科目39证书，
+			<p>科目45考试合格</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="margin-left:18pt; margin-right:0cm">其中：</p>
+
+<p>　　一级：操作技能级。考核计算机基础知识及计算机基本操作能力，包括Office办公软件、图形图像软件、网络安全素质教育。</p>
+
+<p>　　二级：程序设计/办公软件高级应用级。考核内容包括计算机语言与基础程序设计能力，要求参试者掌握一门计算机语言，可选类别有高级语言程序设计类、数据库程序设计类等；二级还包括办公软件高级应用能力，要求参试者具有计算机应用知识及MS Office办公软件的高级应用能力，能够在实际办公环境中开展具体应用。</p>
+
+<p>　　三级：工程师预备级。三级证书考核面向应用、面向职业的岗位专业技能。</p>
+
+<p>　　四级：工程师级。四级证书面向已持有三级相关证书的考生，考核计算机专业课程，是面向应用、面向职业的工程师岗位证书。</p>
+
+<p>　　报名者不受年龄、职业、学历等限制，均可根据自己学习情况和实际能力选考相应的级别和科目。考生可按照省级承办机构公布的流程在网上或考点进行报名。</p>
+
+<p>　　每次考试具体报名时间由各省级承办机构规定，可登录各省级承办机构网站查询。</p>
+
+<p>　　NCRE考试实行百分制计分，但以等第形式通知考生成绩。成绩等第分为“优秀”、“良好”、“及格”、“不及格”四等。100-90分为“优秀”，89-80分为“良好”，79-60分为“及格”，59-0分为“不及格”。</p>
+
+<p>　　考试成绩优秀者，在证书上注明“优秀”字样；考试成绩良好者，在证书上注明“良好”字样；考试成绩及格者，在证书上注明“合格”字样。</p>
+
+<p>　　自1994年开考以来，NCRE适应了市场经济发展的需要，考试持续发展，考生人数逐年递增，至2017年底，累计考生人数超过7600万，累计获证人数近2900万。</p>
+
+</span></div></div>
+</body>
+</html>

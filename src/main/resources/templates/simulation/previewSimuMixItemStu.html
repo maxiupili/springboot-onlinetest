@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>学生用户模拟卷预览页面</title>
+		<!-- Bootstrap core CSS -->
+		<link href="asserts/css/bootstrap.min.css" th:href="@{/asserts/css/bootstrap.min.css}" rel="stylesheet">
+		<!--<link href="asserts/css/bootstrap.css" th:href="@{/asserts/css/bootstrap.css}" rel="stylesheet">-->
+
+		<!-- Custom styles for this template -->
+		<link href="asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
+
+		<style type="text/css">
+			/* Chart.js */
+			
+			@-webkit-keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			@keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			.chartjs-render-monitor {
+				-webkit-animation: chartjs-render-animation 0.001s;
+				animation: chartjs-render-animation 0.001s;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--引入topbar-->
+		<div th:replace="common/stubar::stutopbar"></div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<!--引入sidebar-->
+				<div th:replace="common/stubar::stusidebar(activeUri='simulation')"></div>
+
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+					<h2>[[${simu_name}]]</h2>
+
+					<div class="table-responsive">
+						<form th:each="simulationTestMixItem:${pageInfo.list}" th:action="@{/addSimuTestAnswer}" method="post">
+							<input type="hidden" name="username" th:value="${session.loginUsersUsername}">
+							<input type="hidden" name="simu_name" th:value="${simu_name}">
+							<input type="hidden" name="item_num" th:value="${simulationTestMixItem.getItem_num()}">
+							<div>
+								<div class="form-group">
+									<label>[[${simulationTestMixItem.getItem_num()}]].[[${simulationTestMixItem.getQuestion_type()}]]([[${simulationTestMixItem.getItem_score()}]]分)</label>
+									<textarea class="form-control" rows="10"
+											  th:text="${simulationTestMixItem.getQuestiondetails()}" disabled></textarea>
+								</div>
+								<!--有图片则显示无图隐藏div th:if="${question.getImageurl()!= null}"-->
+								<div class="form-group">
+									<img th:if="${simulationTestMixItem.getImageurl()!= ''}" th:src="@{/asserts/img/}+${simulationTestMixItem.getImageurl()}" height="200px" width="250px">
+								</div>
+								<!--<div th:if="${#strings.equals(session.thisQuestionId,question.getQuestion_id())}">-->
+								<!--<p style="color: red" th:text="${session.addUserFaultMsg}" th:if="${not #strings.isEmpty(session.addUserFaultMsg)}"></p>-->
+								<!--</div>-->
+
+								<div class="form-group">
+									<label>答案</label>
+									<textarea id="answerBox" name="answer" rows="2" class="form-control"></textarea>
+								</div>
+							</div>
+							<button  type="submit" class="btn btn-sm btn-primary">确认提交本题答案</button>
+						</form>
+						<form th:if="${pageInfo.pageNum}==${pageInfo.pages}" th:action="@{/submitPaper}" method="post">
+							<input type="hidden" name="username" th:value="${session.loginUsersUsername}">
+							<input type="hidden" name="simu_name" th:value="${simu_name}">
+							<button type="submit" class="btn btn-sm btn-success">交卷</button>
+						</form>
+					</div>
+
+					<!--显示分页信息-->
+					<div class="modal-footer no-margin-top">
+						<div class="col-md-6">
+							当前第 [[${pageInfo.pageNum}]]页,共 [[${pageInfo.pages}]] 页.一共 [[${pageInfo.total}]] 题
+						</div>
+
+						<!--分页导航栏-->
+						<nav aria-label="Page navigation example">
+							<ul class="pagination">
+								<li class="page-item">
+									<a class="page-link" href="#" th:href="@{/previewSimulationTestStu(simu_name=${simu_name},pageNum=1)}" aria-label="Previous">
+										<span aria-hidden="true">&laquo;</span>
+										<span class="sr-only">Previous</span>
+									</a>
+								</li>
+
+								<li class="page-item" th:each="nav:${pageInfo.navigatepageNums}">
+									<a class="page-link" th:href="@{/previewSimulationTestStu(simu_name=${simu_name},pageNum=${nav})}" th:text="${nav}" th:if="${nav != pageInfo.pageNum}"></a>
+									<span class="page-link" style="background-color: #5bc0de" th:if="${nav == pageInfo.pageNum}" th:text="${nav}"></span>
+								</li>
+
+								<li class="page-item">
+									<a class="page-link" href="#" th:href="@{/previewSimulationTestStu(simu_name=${simu_name},pageNum=${pageInfo.pages})}" aria-label="Next">
+										<span aria-hidden="true">&raquo;</span>
+										<span class="sr-only">Next</span>
+									</a>
+								</li>
+							</ul>
+
+						</nav>
+
+					</div>
+
+
+				</main>
+
+			</div>
+		</div>
+
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/asserts/js/jquery-3.2.1.slim.min.js}"></script>
+		<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/asserts/js/popper.min.js}"></script>
+		<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/asserts/js/bootstrap.min.js}"></script>
+
+		<!-- Icons -->
+		<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
+		<script>
+			feather.replace()
+		</script>
+		<script type="text/javascript">
+
+		</script>
+
+
+
+
+	</body>
+
+</html>
